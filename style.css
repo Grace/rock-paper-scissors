@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+header {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    background-color: black;
+    color: seashell;
+    padding: 0.2rem;
+}
+
+.header-title {
+    margin-left: 1rem;
+}
+
+.header-info {
+    margin-right: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.container {
+    background-color: rgba(225, 225, 225, 0.25);
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.hero-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hero-text {
+    font-size: 3rem;
+    font-weight: 300;
+    justify-self: center;
+    align-self: center;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttons-wrapper button {
+    width: 20rem;
+    height: 10rem;
+    font-size: 2.5rem;
+    box-shadow: 0px 0px 1rem 0px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    align-self: stretch;
+    color: seashell;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+

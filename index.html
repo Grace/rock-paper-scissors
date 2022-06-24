@@ -5,24 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
-    <script src="./js/rock-paper-scissors.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/rock-paper-scissors.js" defer></script>
 </head>
 <body>
     <header>
-        <strong>Rock Paper Scissors</strong>
-        <a href="http://github.com/Grace"><small>developed by @Grace on Github</small></a>
+        <h1 class="header-title">Rock Paper Scissors</h1>
+        <span class="header-info">Developed by <a href="http://github.com/Grace">@Grace (Github)</a></span>
     </header>
     <main class="main">
         <div class="container">
-            <div class="buttons">
-                <button data-choice="rock">Rock</button>
-                <button data-choice="paper">Paper</button>
-                <button data-choice="scissors">Scissors</button>
+            <div class="hero-wrapper">
+                <h2 class="hero-text">Ready to play a round? Click your weapon.</h2>
+            </div>
+            <div class="ui-wrapper">
+                <div class="buttons-wrapper">
+                    <button data-choice="rock">Rock</button>
+                    <button data-choice="paper">Paper</button>
+                    <button data-choice="scissors">Scissors</button>
+                </div>
             </div>
         </div>
     </main>
     <footer>
-        Developed by @Grace on Github. MIT License 2022.
+        <div class="footer-text">
+            <span>Code on <a href="https://github.com/Grace/odin-rock-paper-scissors"> Github</a></span>
+            <span>MIT License</span>
+        </div>
     </footer>
 </body>
 </html>
