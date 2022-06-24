@@ -63,12 +63,12 @@ var playerScore = 0;
 var computerScore = 0;
 
 function checkForWinner(playerScore, computerScore) {
-    if (playerScore === 5) {
+    if (playerScore >= 5) {
         let div = document.querySelector('.round-result-display');
-        div.textContent = "Player wins! That's you";
-    } else if (computerScore === 5) {
+        div.textContent = "Player wins! That's you. Refresh to play again.";
+    } else if (computerScore >= 5) {
         let div = document.querySelector('.round-result-display');
-        div.textContent = "Robot wins!";
+        div.textContent = "Robot wins! Refresh to play again.";
     }
 }
 
