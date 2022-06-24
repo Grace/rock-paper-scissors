@@ -62,11 +62,11 @@ function playRound(playerSelection, computerSelection) {
 const startGame = () => {
     let playerMove;
     let computerMove;
-    for(let i = 0; i < 5; i++) {
-        playerMove = prompt("Rock, paper, or scissors?");
-        computerMove = computerPlay();
-        console.log(playRound(playerMove, computerMove));
-    }
+    // for(let i = 0; i < 5; i++) {
+    //     playerMove = prompt("Rock, paper, or scissors?");
+    //     computerMove = computerPlay();
+    //     console.log(playRound(playerMove, computerMove));
+    // }
 }
 
 startGame();
