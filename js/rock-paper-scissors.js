@@ -59,14 +59,53 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+var playerScore = 0;
+var computerScore = 0;
+
+function checkForWinner(playerScore, computerScore) {
+    if (playerScore === 5) {
+        let div = document.querySelector('.round-result-display');
+        div.textContent = "Player wins! That's you";
+    } else if (computerScore === 5) {
+        let div = document.querySelector('.round-result-display');
+        div.textContent = "Robot wins!";
+    }
+}
+
+function updateScoreUI(playerScore, computerScore) {
+    playerScoreDiv = document.querySelector('.player-score');
+    computerScoreDiv = document.querySelector('.computer-score');
+    playerScoreDiv.dataset.score = parseInt(playerScore);
+    playerScoreDiv.textContent = parseInt(playerScore);
+    computerScoreDiv.dataset.score = parseInt(computerScore);
+    computerScoreDiv.textContent = parseInt(computerScore);
+}
+
+function incrementScores(roundResult) {
+    console.log(roundResult.includes('win'));
+    if (roundResult.includes('win')) {
+        playerScore = playerScore + 1;
+        console.log(playerScore);
+    } else if (!roundResult.includes('tie')) {
+        computerScore = computerScore + 1;
+        console.log(computerScore);
+    }
+    updateScoreUI(playerScore, computerScore);
+}
+
+function playerButtonPressed(e) {
+    let playerMove = e.target.dataset.choice;
+    let computerMove = computerPlay();
+    let roundResult = playRound(playerMove, computerMove);
+    let div = document.querySelector('.round-result-display');
+    div.textContent = roundResult;
+    incrementScores(roundResult);
+    checkForWinner(playerScore, computerScore);
+}
+
 const startGame = () => {
-    let playerMove;
-    let computerMove;
-    // for(let i = 0; i < 5; i++) {
-    //     playerMove = prompt("Rock, paper, or scissors?");
-    //     computerMove = computerPlay();
-    //     console.log(playRound(playerMove, computerMove));
-    // }
+    const buttons = document.querySelectorAll('.buttons-wrapper button');
+    buttons.forEach(button => button.addEventListener('click', playerButtonPressed));
 }
 
 startGame();
