@@ -64,10 +64,10 @@ var computerScore = 0;
 
 function checkForWinner(playerScore, computerScore) {
     if (playerScore >= 5) {
-        let div = document.querySelector('.round-result-display');
+        let div = document.querySelector('.display-text');
         div.textContent = "Player wins! That's you. Refresh to play again.";
     } else if (computerScore >= 5) {
-        let div = document.querySelector('.round-result-display');
+        let div = document.querySelector('.display-text');
         div.textContent = "Robot wins! Refresh to play again.";
     }
 }
@@ -82,28 +82,24 @@ function updateScoreUI(playerScore, computerScore) {
 }
 
 function incrementScores(roundResult) {
-    console.log(roundResult.includes('win'));
-    if (roundResult.includes('win')) {
-        playerScore = playerScore + 1;
-        console.log(playerScore);
-    } else if (!roundResult.includes('tie')) {
-        computerScore = computerScore + 1;
-        console.log(computerScore);
+    if (playerScore < 5 && computerScore < 5) {
+        console.log(roundResult.includes('win'));
+        if (roundResult.includes('win')) {
+            playerScore = playerScore + 1;
+            console.log(playerScore);
+        } else if (!roundResult.includes('tie')) {
+            computerScore = computerScore + 1;
+            console.log(computerScore);
+        }
+        updateScoreUI(playerScore, computerScore);
     }
-    updateScoreUI(playerScore, computerScore);
-}
-
-function hideHeroText() {
-    let element = document.querySelector('.hero-text');
-    element.style.display = 'none';
 }
 
 function playerButtonPressed(e) {
-    hideHeroText();
     let playerMove = e.target.dataset.choice;
     let computerMove = computerPlay();
     let roundResult = playRound(playerMove, computerMove);
-    let div = document.querySelector('.round-result-display');
+    let div = document.querySelector('.display-text');
     div.textContent = roundResult;
     incrementScores(roundResult);
     checkForWinner(playerScore, computerScore);

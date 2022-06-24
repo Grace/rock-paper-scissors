@@ -53,14 +53,18 @@ main {
     align-items: center;
     height: 100vh;
     padding: 1rem;
-    transition: all 2s ease;
 }
 
 .container {
     background-color: #e8e8e8;
     border-radius: 1rem;
-    padding: 3rem;
     box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.25);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    min-width: 70vw;
+    max-width: 70vw;
 }
 
 .hero-wrapper {
@@ -72,18 +76,10 @@ main {
     padding: 2rem;
 }
 
-.hero-text {
-    font-size: 3rem;
-    font-weight: 300;
-    justify-self: center;
-    align-self: center;
-    font-size: 1rem;
-    font-family: 'Press Start 2P';
-}
-
-.round-result-display {
+.display-text {
     font-size: 2rem;
-    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
     font-family: 'Press Start 2P';
 }
 
@@ -96,9 +92,9 @@ main {
 }
 
 .buttons-wrapper button {
-    width: 20rem;
-    height: 10rem;
-    font-size: 2.5rem;
+    width: 50%;
+    height: auto;
+    font-size: 3rem;
     box-shadow: 0px 0px 1rem 0px rgba(0, 0, 0, 0.15);
     border: none;
 }
