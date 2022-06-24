@@ -77,10 +77,14 @@ main {
     font-weight: 300;
     justify-self: center;
     align-self: center;
+    font-size: 1rem;
+    font-family: 'Press Start 2P';
 }
 
 .round-result-display {
     font-size: 2rem;
+    font-size: 1rem;
+    font-family: 'Press Start 2P';
 }
 
 .buttons-wrapper {
@@ -124,13 +128,13 @@ main {
     font-family: 'Press Start 2P';
 }
 
-.player-score::before {
+.player-score, .player-score::before {
     font-size: 1rem;
     font-family: 'Press Start 2P';
     content: 'Player: ';
 }
 
-.computer-score::before {
+.computer-score, .computer-score::before {
     font-size: 1rem;
     font-family: 'Press Start 2P';
     content: 'Robot: ';

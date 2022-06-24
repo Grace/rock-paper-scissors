@@ -93,7 +93,13 @@ function incrementScores(roundResult) {
     updateScoreUI(playerScore, computerScore);
 }
 
+function hideHeroText() {
+    let element = document.querySelector('.hero-text');
+    element.style.display = 'none';
+}
+
 function playerButtonPressed(e) {
+    hideHeroText();
     let playerMove = e.target.dataset.choice;
     let computerMove = computerPlay();
     let roundResult = playRound(playerMove, computerMove);
